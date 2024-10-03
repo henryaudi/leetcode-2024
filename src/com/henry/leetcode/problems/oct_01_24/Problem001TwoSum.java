@@ -6,7 +6,7 @@ import java.util.HashMap;
 /**
  * First program created for testing purpose
  */
-public class Problem001_TwoSum {
+public class Problem001TwoSum {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
 
