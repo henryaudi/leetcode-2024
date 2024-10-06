@@ -78,7 +78,7 @@ public class Problem {
         this.topics = topics;
     }
 
-    // Functions
+    // Methods
 
     /**
      * Convert the problem to a markdown row.

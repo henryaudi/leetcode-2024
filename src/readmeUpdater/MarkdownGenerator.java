@@ -1,8 +1,6 @@
 package readmeUpdater;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -27,12 +25,12 @@ public class MarkdownGenerator {
     public void promptUser() throws IOException {
         Scanner scanner = new Scanner(System.in);
         boolean doContinue = true;
-        int numProblem = 1;
 
         while (doContinue) {
             try {
-                System.out.println("[Problem " + numProblem++ + "]--------------------");
-                this.addProblem(scanner);
+                int problemNo = getNextProblemNo();
+                System.out.println("[Problem " + problemNo + "]--------------------");
+                this.addProblem(scanner, problemNo);
 
                 System.out.print("Add more problem? (Y/N) >> ");
                 String userInput = scanner.nextLine().trim();
@@ -58,7 +56,7 @@ public class MarkdownGenerator {
      * @throws IOException if an error occurs while appending the problem to the README.md
      *
      */
-    private void addProblem(Scanner scanner) throws IOException {
+    private void addProblem(Scanner scanner, int problemNo) throws IOException {
 
         // Prompt user for problem details
         System.out.print("Enter Problem ID: ");
@@ -89,7 +87,7 @@ public class MarkdownGenerator {
                                             topics);
 
         // Append the new problem to the README
-        this.appendToReadme(newProblem);
+        this.appendToReadme(newProblem, problemNo);
 
         System.out.println("Problem added successfully!");
     }
@@ -103,8 +101,9 @@ public class MarkdownGenerator {
      * @throws IOException if capture I/O errors
      *
      */
-    public void appendToReadme(Problem problem) throws IOException {
-        String newProblemRow = problem.toMarkdownRow();
+    private void appendToReadme(Problem problem, int problemNo) throws IOException {
+
+        String newProblemRow = String.format("| %d %s", problemNo, problem.toMarkdownRow());
 
         try (BufferedWriter writer =
                      new BufferedWriter(new FileWriter(README_FILE, true))) {
@@ -113,5 +112,36 @@ public class MarkdownGenerator {
 
         // Print system notice
         System.out.println("Append problem #" + problem.getProblemId() + " successfully!");
+    }
+
+    /**
+     * Reads the last line of the README file to determine the last problem count.
+     *
+     * @return the next problem count (incremented by 1)
+     *
+     * @throws IOException if there's an error reading the file
+     *
+     */
+    private int getNextProblemNo() throws IOException {
+
+        int lastCount = 0;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(README_FILE))) {
+            String line;
+            String lastLine = null;
+
+            while ((line = reader.readLine()) != null) {
+                if (line.startsWith("|")) { lastLine = line; }
+            }
+
+            if (lastLine != null) {
+                String[] columns = lastLine.split("\\|");
+                if (columns.length > 1) {
+                    lastCount = Integer.parseInt(columns[1].trim());
+                }
+            }
+        }
+
+        return lastCount + 1;
     }
 }
