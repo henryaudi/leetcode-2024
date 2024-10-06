@@ -48,4 +48,3 @@ To dynamically add new Leetcode problems to the table:
 | No. | LeetCode ID | Problem Name       | Difficulty | Topics                | Date       | Notes                       |
 |-----|-------------|--------------------|------------|-----------------------|------------|-----------------------------|
 | 1   | 001         | Two Sum             | Easy      | Hash Map, Array       | 10/02/2024 | 😛                         |
-| 2 | 002 | Something | Easy | Nothing to say | 10/02/2024 | Nothing to say |
