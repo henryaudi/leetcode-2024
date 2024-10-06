@@ -1,6 +1,11 @@
 # LeetCode Tracker
 
-This repository contains solutions to LeetCode problems and some algorithm study work I do in my free time. Each problem has its own folder under the `problems` package, and test cases can be found under the `tests` package. Below is a summary of the problems solved so far.
+This repository contains a **dynamic tracker tool** that I built to automatically update this `README.md` file with new problems . The tool simplifies the process of logging and documenting problems, solutions, and related metadata, such as difficulty and topics covered.
+
+In addition to the tracker tool, this repository includes solutions to LeetCode problems and algorithm studies that I work on during my free time. 
+
+Each problem is organized into its own folder under the `problems` package, and test cases are stored in the `tests` package. Below is a summary of the problems solved so far.
+
 
 
 ## Features
@@ -42,4 +47,5 @@ To dynamically add new Leetcode problems to the table:
 ## Table of Contents
 | No. | LeetCode ID | Problem Name       | Difficulty | Topics                | Date       | Notes                       |
 |-----|-------------|--------------------|------------|-----------------------|------------|-----------------------------|
-| 1   | 001         | Two Sum             | Easy      | Hash Map, Array       | 10/02/2024 | 😛                         || 2 | 002 | Something | Easy | Nothing to say | 10/02/2024 | Nothing to say |
+| 1   | 001         | Two Sum             | Easy      | Hash Map, Array       | 10/02/2024 | 😛                         |
+| 2 | 002 | Something | Easy | Nothing to say | 10/02/2024 | Nothing to say |
