@@ -1,5 +1,7 @@
 # LeetCode Tracker
 
+[![Author](https://img.shields.io/badge/Author-Shangjie%20Zheng-blue)](mailto:shangjiehz@gmail.com)
+
 This repository contains a **dynamic tracker tool** that I built to automatically update this `README.md` file with new problems . The tool simplifies the process of logging and documenting problems, solutions, and related metadata, such as difficulty and topics covered.
 
 In addition to the tracker tool, this repository includes solutions to LeetCode problems and algorithm studies that I work on during my free time. 
