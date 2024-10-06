@@ -5,4 +5,4 @@ This repository contains solutions to LeetCode problems and some algorithm study
 ## Table of Contents
 | Problem ID | Problem Name       | Difficulty | Topics                | Date       | Notes                       |
 |------------|--------------------|------------|-----------------------|------------|-----------------------------|
-| 001        | Two Sum             | Easy      | Hash Map, Array       | 2024-10-02 |  😛                         |
+| 001        | Two Sum             | Easy      | Hash Map, Array       | 10-02-2024 |  😛                         |
