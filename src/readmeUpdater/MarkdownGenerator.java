@@ -1,6 +1,7 @@
 package readmeUpdater;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -13,6 +14,98 @@ import java.util.Scanner;
 public class MarkdownGenerator {
 
     private static final String README_FILE = "README.md";
+    private static final String BASE_PACKAGE = "com.henry.leetcode.problems";
+
+    public void getPackageAndUpdateReadme() throws IOException {
+        int numProblem = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user for the package name (e.g., oct_05_24)
+        System.out.print("Enter package name >> ");
+        String packageName = scanner.nextLine();
+
+        // Get the package path string.
+        String packagePath = BASE_PACKAGE + "." + packageName;
+        packagePath = packagePath.replace(".", "/");
+
+        // Assuming the package contains one or more Java problem files
+        File packageDir = new File("src/" + packagePath);
+
+        // List all Java files in the package
+        String[] listOfFiles = packageDir.list();
+
+        if (listOfFiles != null) {
+            for (String fileName : listOfFiles) {
+                if (!fileName.endsWith(".java")) { continue; }
+                File javaFile = new File(packageDir, fileName);
+
+                // Extract the problem from the file.
+                Problem problem = extractFromFile(javaFile);
+
+                if (problem != null) {
+                    int nextProbNo = getNextProblemNo();
+                    appendToReadme(problem, nextProbNo);
+                    numProblem++;
+                }
+            }
+        } else {
+            System.out.println("No files found in the package directory");
+        }
+
+        System.out.println("README.md updated successfully!");
+        System.out.println("--------------------------------");
+        System.out.println("Problems added today: " + numProblem);
+        System.out.println("Total problems added: " + (getNextProblemNo() - 1));
+    }
+
+    private Problem extractFromFile(File javaFile) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(javaFile));
+        String line;
+        String problemId = null,
+                problemName = null,
+                difficulty = null,
+                topics = null,
+                date = null,
+                notes = null;
+
+        // Read the Java file and look for the tags in the docstring
+        while ((line = reader.readLine()) != null) {
+            if (line.contains("@problemId")) {
+                problemId = line.split("@problemId")[1].trim();
+            } else if (line.contains("@problemName")) {
+                problemName = line.split("@problemName")[1].trim();
+            } else if (line.contains("@difficulty")) {
+                difficulty = line.split("@difficulty")[1].trim();
+            } else if (line.contains("@topics")) {
+                topics = line.split("@topics")[1].trim();
+            } else if (line.contains("@date")) {
+                date = line.split("@date")[1].trim();
+            } else if (line.contains("@Notes")) {
+                String[] lineTokens = line.split("@Notes");
+                if (lineTokens.length > 1) {
+                    notes = lineTokens[1].trim();
+                }
+            }
+        }
+
+        reader.close();
+
+        // Check if all necessary details are extracted
+        if (problemId == null
+                || problemName == null
+                || difficulty == null) {
+            System.err.println("Error: Failed to extract problem metadata from " + javaFile.getName());
+            return null;
+        }
+
+        // Split the topics string by commas and trim extra spaces.
+        List<String> topicList = new ArrayList<>();
+        if (topics != null) {
+            topicList = Arrays.asList(topics.split("\\s*,\\s*"));
+        }
+
+        return new Problem(problemId, problemName, difficulty, date, notes, topicList);
+    }
 
     /**
      * Prompt user to enter information related to the problem being

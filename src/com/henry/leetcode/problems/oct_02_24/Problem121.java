@@ -1,5 +1,23 @@
 package com.henry.leetcode.problems.oct_02_24;
 
+/**
+ *
+ * Leetcode 121
+ *
+ * @problemId 121
+ *
+ * @problemName Best Time to Buy and Sell Stock
+ *
+ * @difficulty Easy
+ *
+ * @topics Array, Dynamic Programming
+ *
+ * @date 10/02/2024
+ *
+ * @Notes Used 2 arrays to represent the buy-hold states
+ *
+ */
+
 public class Problem121 {
 
     /**

@@ -2,15 +2,20 @@ package com.henry.leetcode.problems.oct_05_24;
 
 /**
  *
- * LeetCode Problem 409: Longest Palindrome
- * <p>
- * Given a string s which consists of lowercase or uppercase letters, return the length of the longest
- * palindrome that can be built with those letters.
- * Letters are case-sensitive, for example, "Aa" is not considered a palindrome.
- * <p>
- * URL: <a href="https://leetcode.com/problems/longest-palindrome/description/">LEETCODE409</a>
- * <p>
- * Difficulty: EASY
+ * Leetcode 409
+ * Find the longest palindrome using the characters from s.
+ *
+ * @problemId 409
+ *
+ * @problemName Longest Palindrome
+ *
+ * @difficulty Easy
+ *
+ * @topics Character, Array
+ *
+ * @date 10/05/2024
+ *
+ * @Notes Used an array to represent the number of appearance rather than HashMap to enhance time and space complexity. Notice that in ASCII code, A-Z is 65 - 90, and a-z is 97 - 122
  *
  */
 public class Problem409 {

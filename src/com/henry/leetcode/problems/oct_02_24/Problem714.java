@@ -1,5 +1,23 @@
 package com.henry.leetcode.problems.oct_02_24;
 
+/**
+ *
+ * Leetcode 714
+ *
+ * @problemId 714
+ *
+ * @problemName Best Time to Buy and Sell Stock with Transaction Fee
+ *
+ * @difficulty Medium
+ *
+ * @topics Dynamic Programming
+ *
+ * @date 10/02/2024
+ *
+ * @Notes
+ *
+ */
+
 public class Problem714 {
 
     /**

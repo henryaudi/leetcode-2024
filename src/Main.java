@@ -8,6 +8,11 @@ public class Main {
 
         MarkdownGenerator generator = new MarkdownGenerator();
 
-        generator.promptUser();
+        generator.getPackageAndUpdateReadme();
+
+        System.out.println();
+        System.out.println("Press \"Enter\" to exit...");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();  // Wait for the user to press Enter
     }
 }

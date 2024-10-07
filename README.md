@@ -47,9 +47,9 @@ To dynamically add new Leetcode problems to the table:
 
 
 ## Table of Contents
-| No. | LeetCode ID | Problem Name       | Difficulty | Topics                | Date       | Notes                       |
-|-----|-------------|--------------------|------------|-----------------------|------------|-----------------------------|
-| 1   | 001         | Two Sum             | Easy      | Hash Map, Array       | 10/02/2024 | 😛                         |
-| 2 | 121 | Best Time to Buy and Sell Stock | Easy | Array,  Dynamic Programming | 10/02/2024 |  |
-| 3 | 714 | Best Time to Buy and Sell Stock with Transaction Fee | Medium | Dynamic Programming | 10/02/2024 | Used 2 arrays to represent the buy-hold states |
-| 4 | 409 | Longest Palindrome | Easy | Character,  Array | 10/05/2024 | Used an array to represent the number of appearance rather than HashMap to enhance time and space complexity. Notice that in ASCII code, A-Z is 65 - 90, and a-z is 97 - 122 |
+| No. | LeetCode ID | Problem Name       | Difficulty | Topics                     | Date       | Notes                       |
+|-----|-------------|--------------------|------------|----------------------------|------------|-----------------------------|
+| 1   | 001         | Two Sum             | Easy      | Hash Map, Array            | 10/02/2024 | 😛                         |
+| 2 | 121 | Best Time to Buy and Sell Stock | Easy | Array, Dynamic Programming | 10/02/2024 |  |
+| 3 | 714 | Best Time to Buy and Sell Stock with Transaction Fee | Medium | Dynamic Programming        | 10/02/2024 | Used 2 arrays to represent the buy-hold states |
+| 4 | 409 | Longest Palindrome | Easy | Character, Array           | 10/05/2024 | Used an array to represent the number of appearance rather than HashMap to enhance time and space complexity. Notice that in ASCII code, A-Z is 65 - 90, and a-z is 97 - 122 || 5 | 409 | Longest Palindrome | Easy | BFS, DFS, Dynamic Programming | 10/05/2024 | Used an array to represent the number of appearance rather than HashMap to enhance time and space complexity. Notice that in ASCII code, A-Z is 65 - 90, and a-z is 97 - 122 |
