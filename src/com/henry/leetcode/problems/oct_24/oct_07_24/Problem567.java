@@ -1,4 +1,4 @@
-package com.henry.leetcode.problems.oct_07_24;
+package com.henry.leetcode.problems.oct_24.oct_07_24;
 
 /**
  * LeetCode Problem 409: Longest Palindrome

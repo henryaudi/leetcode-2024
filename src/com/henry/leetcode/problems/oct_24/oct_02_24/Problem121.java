@@ -1,4 +1,4 @@
-package com.henry.leetcode.problems.oct_02_24;
+package com.henry.leetcode.problems.oct_24.oct_02_24;
 
 /**
  *

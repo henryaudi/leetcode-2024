@@ -101,3 +101,5 @@ public class Problem409 {
 | 4 | 409 | Longest Palindrome | Easy | Character, Array           | 10/05/2024 | Used an array to represent the number of appearance rather than HashMap to enhance time and space complexity. Notice that in ASCII code, A-Z is 65 - 90, and a-z is 97 - 122 || 5 | 409 | Longest Palindrome | Easy | BFS, DFS, Dynamic Programming | 10/05/2024 | Used an array to represent the number of appearance rather than HashMap to enhance time and space complexity. Notice that in ASCII code, A-Z is 65 - 90, and a-z is 97 - 122 |
 | 5 | 567 | Permutation in String | Medium | Sliding Window | 10/07/2024 | Create a sliding window, every time you move, you remove the first, and add the one after the last. |
 | 6 | 572 | Subtree of Another Tree | Easy | Recursion | 10/08/2024 | The key is to compare if two trees are the same, by comparing left subtree and right subtree. |
+| 7 | 165 | Compare Version Numbers | Medium | String, Regex | 10/09/2024 | To split a string by '.', we use `version1.split("\\.");`. |
+| 8 | 5 | Longest Palindromic Substring | Medium | Two Pointers | 10/09/2024 | null |

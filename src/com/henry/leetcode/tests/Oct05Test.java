@@ -1,6 +1,6 @@
 package com.henry.leetcode.tests;
 
-import com.henry.leetcode.problems.oct_05_24.Problem409;
+import com.henry.leetcode.problems.oct_24.oct_05_24.Problem409;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

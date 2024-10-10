@@ -2,7 +2,7 @@ package com.henry.leetcode.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.henry.leetcode.problems.oct_01_24.Problem001TwoSum;
+import com.henry.leetcode.problems.oct_24.oct_01_24.Problem001TwoSum;
 import org.junit.jupiter.api.Test;
 
 public class Problem001TwoSumTest {

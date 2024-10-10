@@ -1,7 +1,7 @@
 package com.henry.leetcode.tests;
 
-import com.henry.leetcode.problems.oct_02_24.Problem121;
-import com.henry.leetcode.problems.oct_02_24.Problem714;
+import com.henry.leetcode.problems.oct_24.oct_02_24.Problem121;
+import com.henry.leetcode.problems.oct_24.oct_02_24.Problem714;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
