@@ -103,3 +103,5 @@ public class Problem409 {
 | 6 | 572 | Subtree of Another Tree | Easy | Recursion | 10/08/2024 | The key is to compare if two trees are the same, by comparing left subtree and right subtree. |
 | 7 | 165 | Compare Version Numbers | Medium | String, Regex | 10/09/2024 | To split a string by '.', we use `version1.split("\\.");`. |
 | 8 | 5 | Longest Palindromic Substring | Medium | Two Pointers | 10/09/2024 | null |
+| 9 | 125 | Valid Palindrome | Easy | Two Pointers | 10/10/2024 | Get familiar with Character methods, such as Character.toLowerCase(), Character.isDigit(), Character.isLetter() |
+| 10 | 680 | Valid Palindrome II | Easy | Two Pointers, String | 10/10/2024 | Each time you have 2 characters to choose, either one to remove, that gives you 2 possible strings, try to generate those 2 strings. |
