@@ -1,6 +1,6 @@
 package com.henry.leetcode.tests;
 
-import com.henry.leetcode.problems.dec_24.dec_05_24.QuickSort;
+import com.henry.leetcode.problems.dec_24.dec_12_24.QuickSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
